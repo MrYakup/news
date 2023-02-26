@@ -1,0 +1,21 @@
+.headerTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerSearch {
+  border-radius: 10px;
+  padding: 6px 8px;
+  border-color: "#f2f2f2";
+  opacity: 0.3;
+  box-shadow: 2px 2px 2px black;
+}
+.headerLinkContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.headerLink {
+  list-style-type: none;
+}
