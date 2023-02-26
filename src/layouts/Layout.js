@@ -1,19 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import { GlobalProvider } from '../contexts/GlobalState';
+import { Box } from '@mui/material';
 
 function Layout() {
 
     return (
-        <div style={{ minHeight: '90vh' }}>
-            <GlobalProvider>
+        <GlobalProvider>
+            <Box
+                sx={{
+                    minHeight: "100vh",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                }}
+            >
                 <Header />
                 <Outlet />
                 <Footer />
-            </GlobalProvider>
-        </div>
+            </Box>
+        </GlobalProvider>
     )
 }
 

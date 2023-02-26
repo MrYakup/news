@@ -4,21 +4,23 @@ import "./home.css";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+
+
 import { Box, Container, Typography } from '@mui/material';
-import NewsItem from '../../components/newsItem/NewsItem';
 import Pagination from '@mui/material/Pagination';
+
+import NewsItem from '../../components/newsItem/NewsItem';
 import { GlobalContext } from '../../contexts/GlobalState';
+import Slider from '../../components/slider/Slider';
 
 function Home() {
     const [news, setNews] = useState([]);
 
-    const { search, setSearch } = useContext(GlobalContext)
+    const { search } = useContext(GlobalContext)
     // var regex = /deprem/i;
     const slicedNews = news.slice(3);
     let regex = new RegExp(search, 'gi');
     const searchNews = slicedNews.filter((item) => regex.test(item.title))
-
-
 
 
     const [itemsPerPage, setItemsPerPage] = useState(8)
@@ -29,16 +31,14 @@ function Home() {
     const pageCount = Math.ceil(searchNews?.length / itemsPerPage);
 
     const api = () => {
-        axios.get('https://newsapi.org/v2/top-headlines?country=tr&apiKey=676f017549224f488970f1835f9db971')
+        axios.get('https://newsapi.org/v2/top-headlines?country=tr&apiKey=8d8fc178de1741be89da43d8161c27ae')
             .then(function (response) {
                 setNews(response.data.articles)
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
             })
             .finally(function () {
-                // always executed
             });
     }
 
@@ -54,12 +54,13 @@ function Home() {
 
     return (
         <Box>
+
             <Box
                 sx={{
                     mb: { xs: '30px', sm: '100px' }
                 }}
             >
-                <Swiper
+                {/* <Swiper
                     style={{ height: "40vh" }}
                     spaceBetween={1}
                     slidesPerView={1}
@@ -69,13 +70,10 @@ function Home() {
                             return (
                                 <SwiperSlide style={{ display: 'flex', justifyContent: 'center', backgroundColor: 'red' }} key={index} >
                                     <div className="newsContainer">
-                                        <div className="newsImage">
-                                            {
-                                                item?.urlToImage ? <img className="sliderImage" src={item?.urlToImage} /> :
-                                                    <img className="sliderImage" src={"https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} />
-                                            }
-
-                                        </div>
+                                        {
+                                            item?.urlToImage ? <img className="sliderImage" src={item?.urlToImage} /> :
+                                                <img className="sliderImage" src={"https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} />
+                                        }
                                         <div className="newsContent">
                                             <p>Source Of News: <b>{item?.author ? item.author : "Unknown"}</b></p>
                                             <h3>{item?.title}</h3>
@@ -86,7 +84,9 @@ function Home() {
                             )
                         })
                     }
-                </Swiper>
+                </Swiper> */}
+
+                <Slider news={news} />
             </Box>
 
 

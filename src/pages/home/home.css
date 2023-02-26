@@ -11,6 +11,25 @@
   object-fit: cover;
   object-position: center;
 }
+
 .newsContent {
   width: 50vw;
+}
+
+@media screen and (max-width: 500px) {
+  .newsContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sliderImage {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .newsContent {
+    width: 100%;
+  }
 }

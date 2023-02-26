@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -50,15 +50,16 @@ const countryCodes = [
 
 ]
 
+const categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
+
 function Category() {
 
     const { name } = useParams()
     const [country, setCountry] = useState('TR');
     const [categoryNews, setCategoryNews] = useState([]);
-    const categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
 
 
-    const { search, setSearch } = useContext(GlobalContext)
+    const { search } = useContext(GlobalContext)
     let regex = new RegExp(search, 'gi');
     const searchNews = categoryNews.filter((item) => regex.test(item.title))
 
@@ -72,16 +73,14 @@ function Category() {
 
 
     const api = () => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${name}&apiKey=676f017549224f488970f1835f9db971`)
+        axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${name}&apiKey=8d8fc178de1741be89da43d8161c27ae`)
             .then(function (response) {
                 setCategoryNews(response?.data?.articles)
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
             })
             .finally(function () {
-                // always executed
             });
     }
 
@@ -109,7 +108,6 @@ function Category() {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "flex-start",
-                        // gap: "20px",
                         pl: "20px"
                     }}
                 >
@@ -139,6 +137,7 @@ function Category() {
                         })
                     }
                 </Box>
+
                 <Box sx={{ m: "22px" }}>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">country</InputLabel>
@@ -160,7 +159,9 @@ function Category() {
                         </Select>
                     </FormControl>
                 </Box>
+
             </Grid>
+
             <Grid item xs={12} sm={8} md={10}>
                 <Container>
                     {
@@ -185,6 +186,7 @@ function Category() {
                     </Box>
                 </Container>
             </Grid>
+
         </Grid>
 
     )

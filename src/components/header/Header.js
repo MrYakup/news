@@ -9,17 +9,6 @@ function Header() {
 
     const { search, setSearch } = useContext(GlobalContext)
 
-    // let activeStyle = {
-    //     textDecoration: "none",
-    //     borderBottom: "2px solid #f2f2f2",
-    //     color: "blue"
-    // }
-    // let inactiveStyle = {
-    //     textDecoration: "none",
-    //     borderBottom: "none",
-    //     color: "black"
-    // }
-
     return (
         <Box sx={{ borderBottom: "2px solid #f2f2f2", marginBottom: "30px" }}>
             <div className="headerTop">

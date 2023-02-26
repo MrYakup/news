@@ -5,10 +5,10 @@ import SendIcon from '@mui/icons-material/Send';
 function Footer() {
     return (
         <Box sx={{ paddingTop: "100px", paddingBottom: "20px", display: "flex", flexDirection: "column", gap: "50px", alignItems: "center" }}>
-            <Box sx={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "100%", height: "200px", backgroundColor: "#f8f9fa" }}>
-                <Box sx={{ width: "40%" }}>
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, justifyContent: "space-around", alignItems: "center", height: "200px", width: "100%", backgroundColor: "#f8f9fa" }}>
+                <Box sx={{ width: { xs: "60%", sm: "30%" }, display: "flex", flexDirection: "column", alignItems: { xs: "center", sm: "flex-start" } }}>
                     <Typography sx={{ fontSize: "18px", fontWeight: "600" }}>Newsletter Subcribe</Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!
+                    <Typography sx={{ fontSize: "12px", textAlign: { xs: "center", sm: "left" } }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</Typography>
                 </Box>
                 <Box
                     sx={{
@@ -37,8 +37,8 @@ function Footer() {
                     </IconButton>
                 </Box>
             </Box>
-            <Box>Copyright ©2023 All rights reserved | This template is made with by <a style={{ textDecoration: "none", color: "green" }} href="#?">Onur KORDOĞAN</a></Box>
-        </Box>
+            <Box sx={{ textAlign: "center" }}>Copyright ©2023 All rights reserved | This template is made with by <a style={{ textDecoration: "none", color: "green" }} href="#?">Onur KORDOĞAN</a></Box>
+        </Box >
     )
 }
 
