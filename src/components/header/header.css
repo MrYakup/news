@@ -10,12 +10,3 @@
   opacity: 0.3;
   box-shadow: 2px 2px 2px black;
 }
-.headerLinkContainer {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.headerLink {
-  list-style-type: none;
-}

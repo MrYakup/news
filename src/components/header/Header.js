@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from "react-router-dom";
 import "./header.css";
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, IconButton } from '@mui/material';
+import { GlobalContext } from '../../contexts/GlobalState';
 
 function Header() {
 
-    // let activeStyle = {
-    //     textDecoration: "underline",
-    // };
+    const { search, setSearch } = useContext(GlobalContext)
 
-    // let activeClassName = "underline";
+    // let activeStyle = {
+    //     textDecoration: "none",
+    //     borderBottom: "2px solid #f2f2f2",
+    //     color: "blue"
+    // }
+    // let inactiveStyle = {
+    //     textDecoration: "none",
+    //     borderBottom: "none",
+    //     color: "black"
+    // }
 
     return (
-        <div>
+        <Box sx={{ borderBottom: "2px solid #f2f2f2", marginBottom: "30px" }}>
             <div className="headerTop">
                 <h2>Onur KORDOĞAN</h2>
                 <Box
@@ -29,7 +37,8 @@ function Header() {
                     }}
                 >
                     <input
-                        // className="headerSearch" 
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
                         placeholder='search..'
                         style={{
                             border: 'none',
@@ -43,50 +52,66 @@ function Header() {
                     </IconButton>
                 </Box>
             </div>
-            <nav>
-                <ul className="headerLinkContainer">
-                    <li className="headerLink">
-                        <NavLink
-                            to="/"
-                            style={({ isActive }) =>
-                            ({
-                                textDecoration: "none",
-                                color: isActive ? 'blue' : 'black'
-                            })
-                            }
-                        >
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className="headerLink">
-                        <NavLink
-                            to="/categories"
-                            style={({ isActive }) =>
-                            ({
-                                textDecoration: "none",
-                                color: isActive ? 'blue' : 'black'
-                            })
-                            }
-                        >
-                            Cotegories
-                        </NavLink>
-                    </li>
-                    <li className="headerLink">
-                        <NavLink
-                            to="aboutUs"
-                            style={({ isActive }) =>
-                            ({
-                                textDecoration: "none",
-                                color: isActive ? 'blue' : 'black'
-                            })
-                            }
-                        >
-                            AboutUs
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+
+                <NavLink
+                    to="/"
+                    style={({ isActive }) =>
+                    ({
+                        textDecoration: "none",
+                        color: isActive ? '#000' : '#666',
+                        textTransform: "capitalize",
+                        backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                        width: "200px",
+                        padding: "8px",
+                        fontWeight: isActive ? "600" : "400",
+                        textAlign: "center",
+                    })
+                    }
+                >
+                    Home
+                </NavLink>
+
+
+                <NavLink
+                    to="/categories/general"
+                    style={({ isActive }) =>
+                    ({
+                        textDecoration: "none",
+                        color: isActive ? '#000' : '#666',
+                        textTransform: "capitalize",
+                        backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                        width: "200px",
+                        padding: "8px",
+                        fontWeight: isActive ? "600" : "400",
+                        textAlign: "center",
+                    })
+                    }
+                >
+                    Cotegories
+                </NavLink>
+
+
+                <NavLink
+                    to="aboutUs"
+                    style={({ isActive }) =>
+                    ({
+                        textDecoration: "none",
+                        color: isActive ? '#000' : '#666',
+                        textTransform: "capitalize",
+                        backgroundColor: isActive ? "#f2f2f2" : "#fff",
+                        width: "200px",
+                        padding: "8px",
+                        fontWeight: isActive ? "600" : "400",
+                        textAlign: "center",
+                    })
+                    }
+                >
+                    AboutUs
+                </NavLink>
+
+            </Box>
+        </Box>
     )
 }
 
