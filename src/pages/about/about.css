@@ -1,0 +1,4 @@
+ .avatarContainer:hover .details {
+     bottom: 0;
+     justify-content: center;
+ }

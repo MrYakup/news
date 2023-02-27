@@ -2,9 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import "./home.css";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-
 
 import { Box, Container, Typography } from '@mui/material';
 import Pagination from '@mui/material/Pagination';
@@ -60,32 +57,6 @@ function Home() {
                     mb: { xs: '30px', sm: '100px' }
                 }}
             >
-                {/* <Swiper
-                    style={{ height: "40vh" }}
-                    spaceBetween={1}
-                    slidesPerView={1}
-                >
-                    {
-                        news?.slice(0, 3).map((item, index) => {
-                            return (
-                                <SwiperSlide style={{ display: 'flex', justifyContent: 'center', backgroundColor: 'red' }} key={index} >
-                                    <div className="newsContainer">
-                                        {
-                                            item?.urlToImage ? <img className="sliderImage" src={item?.urlToImage} /> :
-                                                <img className="sliderImage" src={"https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"} />
-                                        }
-                                        <div className="newsContent">
-                                            <p>Source Of News: <b>{item?.author ? item.author : "Unknown"}</b></p>
-                                            <h3>{item?.title}</h3>
-                                            <p>{item?.content}</p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            )
-                        })
-                    }
-                </Swiper> */}
-
                 <Slider news={news} />
             </Box>
 
