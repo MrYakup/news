@@ -19,7 +19,20 @@ function AboutUs() {
     return (
         <Box>
 
-            <Box sx={{ display: "flex", flexDirection: "column", paddingLeft: 2 }}>
+            <Box sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent:"center",
+                alignItems:"center",
+                gap:"12px",
+                paddingX:"4px",
+                paddingY:"18px",
+                background: "rgba(6, 12, 34, 0.01)",
+                boxShadow: "6px 6px 10px #f2f2f2",
+                position: "absolute",
+                right: "8px",
+                top: "150px",
+            }}>
                 <Box
                     className="avatarContainer"
                     sx={{
@@ -114,32 +127,28 @@ function AboutUs() {
                         </Box>
                     </Box>
                 </Box>
-            </Box>
 
-            <Box sx={{
-                position: "absolute",
-                right: "10px",
-                top: "150px",
-                background: "rgba(6, 12, 34, 0.01)",
-                boxShadow: "6px 6px 10px #f2f2f2",
-                textAlign: "center",
-                paddingY: "50px",
-                paddingX:"6px"
-            }}>
-                <Typography>Onur KORDOĞAN</Typography>
-                <Typography>Full Stack Developer</Typography>
+                <Box sx={{
+                    textAlign: "center",
+                }}>
+                    {/* <Typography>Onur KORDOĞAN</Typography> */}
+                    <Typography sx={{paddingBottom:"10px"}}>Full Stack Developer</Typography>
 
-                <ContactMailIcon color='primary' fontSize='large' />
-                <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                    <Box >
-                        <Link sx={{ textDecoration: "none" }} href="tel:+90 537 625 48 93">+90 537 625 48 93</Link>
-                    </Box>
+                    <ContactMailIcon color='primary' fontSize='large' />
+                    <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                        <Box >
+                            <Link sx={{ textDecoration: "none" }} href="tel:+90 537 625 48 93">+90 537 625 48 93</Link>
+                        </Box>
 
-                    <Box >
-                        <Link sx={{ textDecoration: "none" }} href="mailto:onurkordogan@gmail.com">onurkordogan@gmail.com</Link>
+                        <Box >
+                            <Link sx={{ textDecoration: "none" }} href="mailto:onurkordogan@gmail.com">onurkordogan@gmail.com</Link>
+                        </Box>
                     </Box>
                 </Box>
+
             </Box>
+
+
 
             <SideNavbar />
 

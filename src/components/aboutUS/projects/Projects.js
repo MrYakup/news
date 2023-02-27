@@ -11,7 +11,7 @@ function Projects() {
         background: "rgba(6, 12, 34, 0.01)",
         boxShadow: "6px 6px 10px #f2f2f2"
       }}>
-      <Box sx={{ textAlign: "center", pl: "60px" }}>
+      <Box sx={{ textAlign: "center", pl:{xs:"10px", sm:"60px"} }}>
 
 
         <Typography sx={{ fontSize: "18px", fontWeight: "700" }}>HTML-CSS</Typography>

@@ -11,7 +11,7 @@ function Summary() {
         background:"rgba(6, 12, 34, 0.01)",
         boxShadow:"6px 6px 10px #f2f2f2"
       }}>
-      <Box sx={{ pl: "60px" }}>
+      <Box sx={{ pl: {xs:"18px", sm:"60px"} }}>
         <Typography sx={{ fontSize: "20px", fontWeight: "700", textAlign: "center" }}>Summary</Typography>
         <Typography sx={{ textIndent: "70px" }}>
           +2 years experienced in IT and a diligent front-end developer. Have one of the most vital skills in

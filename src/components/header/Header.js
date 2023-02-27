@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { NavLink } from "react-router-dom";
 import "./header.css";
 import SearchIcon from '@mui/icons-material/Search';
-import { Box, IconButton } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import { GlobalContext } from '../../contexts/GlobalState';
 
 function Header() {
@@ -11,8 +11,8 @@ function Header() {
 
     return (
         <Box sx={{ borderBottom: "2px solid #f2f2f2", marginBottom: "30px" }}>
-            <div className="headerTop">
-                <h2>Onur KORDOĞAN</h2>
+            <Box className="headerTop">
+                <Typography sx={{fontSize:{xs:"16px", sm:"18px"}, fontWeight:"600" }}>Onur KORDOĞAN</Typography>
                 <Box
                     sx={{
                         display: "flex",
@@ -40,7 +40,7 @@ function Header() {
                         <SearchIcon sx={{ color: '#ddd' }} />
                     </IconButton>
                 </Box>
-            </div>
+            </Box>
             <Box sx={{ display: "flex", justifyContent: "center" }}>
 
                 <NavLink
