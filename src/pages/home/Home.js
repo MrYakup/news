@@ -62,8 +62,6 @@ function Home() {
                 <Slider news={news} />
             </Box>
 
-
-
             <Container>
                 {
                     search ?

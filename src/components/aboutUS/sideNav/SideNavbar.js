@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ export const SideNavbar = () => {
   const [activeNav, setActiveNav] = useState('#');
 
   return (
-    <nav>
+    <Box className="nav">
       <a href="#"
         onClick={() => setActiveNav('#')}
         className={activeNav === '#' ? 'active' : ''}
@@ -43,7 +43,7 @@ export const SideNavbar = () => {
           Professional
         </Typography>
       </a>
-    </nav>
+    </Box>
   );
 };
 

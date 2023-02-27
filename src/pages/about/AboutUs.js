@@ -22,11 +22,11 @@ function AboutUs() {
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
-                justifyContent:"center",
-                alignItems:"center",
-                gap:"12px",
-                paddingX:"4px",
-                paddingY:"18px",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "12px",
+                paddingX: "4px",
+                paddingY: "18px",
                 background: "rgba(6, 12, 34, 0.01)",
                 boxShadow: "6px 6px 10px #f2f2f2",
                 position: "absolute",
@@ -88,24 +88,6 @@ function AboutUs() {
                         </Link>
 
                         <Box sx={{ height: "30px", display: "flex", justifyContent: "center", gap: "8px" }}>
-                            <Link href="">
-                                <InstagramIcon sx={{
-                                    "&:hover": {
-                                        color: "#ec704c",
-                                        transition: "all",
-                                        transitionDuration: "300ms"
-                                    }
-                                }} />
-                            </Link>
-                            <Link href="">
-                                <TwitterIcon sx={{
-                                    "&:hover": {
-                                        color: "#ec704c",
-                                        transition: "all",
-                                        transitionDuration: "300ms"
-                                    }
-                                }} />
-                            </Link>
                             <Link href="https://github.com/OnurKor">
                                 <GitHubIcon sx={{
                                     "&:hover": {
@@ -132,7 +114,7 @@ function AboutUs() {
                     textAlign: "center",
                 }}>
                     {/* <Typography>Onur KORDOĞAN</Typography> */}
-                    <Typography sx={{paddingBottom:"10px"}}>Full Stack Developer</Typography>
+                    <Typography sx={{ paddingBottom: "10px" }}>Full Stack Developer</Typography>
 
                     <ContactMailIcon color='primary' fontSize='large' />
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>

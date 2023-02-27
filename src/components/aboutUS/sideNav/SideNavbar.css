@@ -1,34 +1,32 @@
-nav {
+.nav {
   position: fixed;
   display: flex;
   flex-direction: row-reverse;
-  transform: rotate(-90deg) translate3d(-50%,0,0);
+  transform: rotate(-90deg) translate3d(-50%, 0, 0);
   top: 30%;
   left: -7.5rem;
 }
-nav a {
+.nav a {
   margin-right: 20px;
   text-decoration: none;
   color: #ec6f4c7a;
   transition: all;
   transition-duration: 500ms;
 }
-nav a:hover {
+.nav a:hover {
   margin-right: 20px;
   text-decoration: none;
   color: #ec704c;
 }
-nav a.active {
+.nav a.active {
   color: #fff;
   background: rgba(6, 12, 34, 0.18);
   padding-right: 4px;
-  padding-left:4px;
+  padding-left: 4px;
 }
 
-
 @media screen and (max-width: 600px) {
-  nav {
+  .nav {
     left: -9.5rem;
   }
-
 }

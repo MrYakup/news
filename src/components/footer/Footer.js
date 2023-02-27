@@ -37,7 +37,7 @@ function Footer() {
                     </IconButton>
                 </Box>
             </Box>
-            <Box sx={{ textAlign: "center" }}>Copyright ©2023 All rights reserved | This template is made with by <a style={{ textDecoration: "none", color: "green" }} href="#?">Onur KORDOĞAN</a></Box>
+            <Box sx={{ textAlign: "center" }}>Copyright ©2023 All rights reserved | This template is made with by <a style={{ textDecoration: "none", color: "green" }} href="https://www.linkedin.com/in/onur-kordogan">Onur KORDOĞAN</a></Box>
         </Box >
     )
 }
