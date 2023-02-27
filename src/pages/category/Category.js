@@ -58,7 +58,6 @@ function Category() {
     const [country, setCountry] = useState('TR');
     const [categoryNews, setCategoryNews] = useState([]);
 
-
     const { search } = useContext(GlobalContext)
     let regex = new RegExp(search, 'gi');
     const searchNews = categoryNews.filter((item) => regex.test(item.title))

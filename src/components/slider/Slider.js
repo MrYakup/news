@@ -9,6 +9,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { Link } from '@mui/material';
+import "./slider.css";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

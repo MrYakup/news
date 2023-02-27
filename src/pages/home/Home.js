@@ -27,6 +27,8 @@ function Home() {
     const currentNews = searchNews?.slice(indexOfFirstNews, indexOfLastNews);
     const pageCount = Math.ceil(searchNews?.length / itemsPerPage);
 
+
+
     const api = () => {
         axios.get('https://newsapi.org/v2/top-headlines?country=tr&apiKey=8d8fc178de1741be89da43d8161c27ae')
             .then(function (response) {
